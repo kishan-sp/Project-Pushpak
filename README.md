@@ -62,7 +62,8 @@ torch==2.0.1
    Anyways, it first initializes an environment, added some noise in the environment, finally the loop of action starts -> actions are observed, rewarded, and stored info -> then the model terminates or truncates according to the range of steps mentioned in the for loop (300) meaning it will truncate after 300 frames or 3 seconds and terminate means that lander crashed and episode ends.
 
 3. **train_agent.py** - This is the main file which uses sensors and pushpak_env files for creating the model.
-	   It contains the model's algorithm (Proximal Policy Optimization) which will be trained. The model has been tweaked according to my PC's limitations and here is the gist of what I changed:```
+	   It contains the model's algorithm (Proximal Policy Optimization) which will be trained. The model has been tweaked according to my PC's limitations and here is the gist of what I changed:
+   ```
 	model = PPO(
 	            "MlpPolicy",
 	            vec_env,
@@ -78,7 +79,8 @@ torch==2.0.1
 	            max_grad_norm=0.5,
 	            ent_coef=0.005,
 	            tensorboard_log=LOG_DIR,
-	        )```
+	        )
+   ```
 	
 	- **learning_rate:** Step size 3e-4 or 0.0003
 	
