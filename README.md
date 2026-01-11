@@ -1,7 +1,7 @@
 # Quickstart (5 minutes)
 ```python
 # 1. Clone & setup virtual environment (skip C++ tools if not on Windows) 
-git clone <your-repo-url> 
+gh repo clone kishan-sp/Project-Pushpak
 cd pushpak-lander 
 python -m venv venv 
 venv\Scripts\activate # Windows 
